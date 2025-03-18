@@ -1,6 +1,19 @@
 import os
 
-# Make the list of IPs
+# Function to ping an IP
+def ping_ip(ip):
+    if os.name == "nt":  # Windows
+        command = "ping -n 2 " + ip
+    else:  # Linux/Unix
+        command = "ping -c 2 " + ip
+    result = os.system(command)
+    if result == 0:
+        print(f"{ip} is UP")
+    else:
+        print(f"{ip} is DOWN")
+
+
+    # Make the list of IPs
     ip_list = make_ip_list(start_ip, end_ip)
     
     # Check if list was created successfully
@@ -13,16 +26,3 @@ import os
             ping_ip(ip)
     else:
         print("No IPs to ping due to invalid input")
-
-
-# Function to ping an IP
-def ping_ip(ip):
-    if os.name == "nt":  # Windows
-        command = "ping -n 2 " + ip
-    else:  # Linux/Unix
-        command = "ping -c 2 " + ip
-    result = os.system(command)
-    if result == 0:
-        print(f"{ip} is UP")
-    else:
-        print(f"{ip} is DOWN")
