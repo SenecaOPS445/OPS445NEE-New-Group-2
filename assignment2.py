@@ -151,12 +151,12 @@ if __name__ == '__main__':
     
     elif len(sys.argv) == 3:
         if sys.argv[1] == sys.argv[2]:
-            print ('The Frist Argument is the same as the Second Argument')
-            print ('Skiping Srcond Argument')
+            print ('The First Argument is the same as the Second Argument')
+            print ('Skiping Second Argument')
             if validate_ip(sys.argv[1]):
                 ping_ip(sys.argv[1])  
         elif validate_ip_in_range(sys.argv[1], sys.argv[2]):
             check_ip_range(sys.argv[1], sys.argv[2])
     
     else:
-        print("Useage: messege..")
+        print("Usage: message..")
