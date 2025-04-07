@@ -138,7 +138,7 @@ if __name__ == '__main__':
     parser.add_argument("ip_or_subnet", nargs="?", help="An IP address or subnet to ping.")
     
     # second IP is a optional argument (hence, nargs='?'; add the "end_ip" argument
-    parser.add_argument("end_ip", nargs="?", help="End IP address for a range (optional).")
+    parser.add_argument("end_ip", nargs="?", help="End IP address for a range.")
    
     # retrieve the arguments supplied by the user
     args = parser.parse_args()
