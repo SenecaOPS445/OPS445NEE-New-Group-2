@@ -130,7 +130,7 @@ def validate_ip(first_ip, last_ip = None):
 
 if __name__ == '__main__':
     
-    # create a argparse object 
+    # create an argparse object and add a description for the program
     parser = argparse.ArgumentParser(description="Ping IPs or check IP ranges/subnets.")
     
     # first IP or subnet is an optional argument; add the "ip_or_subnet" argument
